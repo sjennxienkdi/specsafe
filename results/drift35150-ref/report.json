@@ -1,0 +1,84 @@
+{
+  "run_id": "20261024_125202-drift35150",
+  "matrix": "drift35150",
+  "engine": "reference",
+  "engine_info": {
+    "vocab": 101,
+    "impl": "pure-python",
+    "capabilities": [
+      "draft_mode",
+      "state_digest",
+      "graph_regime"
+    ]
+  },
+  "ts": "2026-10-24T12:52:02",
+  "duration_s": 0.7,
+  "outcomes": [
+    {
+      "invariant": "all_reject_equivalence",
+      "case_id": "drift-k1-n4-L256",
+      "scenario_id": "drift35150/k1-n4-L256",
+      "status": "pass",
+      "details": "",
+      "mismatches": [],
+      "arms": [
+        {
+          "label": "spec_forced_reject",
+          "n_requests": 4,
+          "total_tokens": 1024,
+          "mean_accept_len": 1.0
+        },
+        {
+          "label": "target_only",
+          "n_requests": 4,
+          "total_tokens": 1024,
+          "mean_accept_len": null
+        }
+      ]
+    },
+    {
+      "invariant": "all_reject_equivalence",
+      "case_id": "drift-k3-n8-L512",
+      "scenario_id": "drift35150/k3-n8-L512",
+      "status": "pass",
+      "details": "",
+      "mismatches": [],
+      "arms": [
+        {
+          "label": "spec_forced_reject",
+          "n_requests": 8,
+          "total_tokens": 4096,
+          "mean_accept_len": 1.0
+        },
+        {
+          "label": "target_only",
+          "n_requests": 8,
+          "total_tokens": 4096,
+          "mean_accept_len": null
+        }
+      ]
+    },
+    {
+      "invariant": "all_reject_equivalence",
+      "case_id": "drift-k7-n32-L256",
+      "scenario_id": "drift35150/k7-n32-L256",
+      "status": "pass",
+      "details": "",
+      "mismatches": [],
+      "arms": [
+        {
+          "label": "spec_forced_reject",
+          "n_requests": 32,
+          "total_tokens": 8192,
+          "mean_accept_len": 1.0
+        },
+        {
+          "label": "target_only",
+          "n_requests": 32,
+          "total_tokens": 8192,
+          "mean_accept_len": null
+        }
+      ]
+    }
+  ]
+}

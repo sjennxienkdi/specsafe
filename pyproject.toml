@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "specsafe"
+version = "0.2.0"
+description = "Differential correctness testing for speculative decoding on hybrid GDN/Attention architectures"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+dependencies = []  # core is stdlib-only; the vLLM adapter imports vllm lazily
+
+[project.scripts]
+specsafe = "specsafe.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+include = ["specsafe*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

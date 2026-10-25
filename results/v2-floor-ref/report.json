@@ -1,0 +1,86 @@
+{
+  "run_id": "20261024_201228-floor",
+  "matrix": "floor",
+  "engine": "reference",
+  "engine_info": {
+    "vocab": 101,
+    "impl": "pure-python",
+    "capabilities": [
+      "draft_mode",
+      "state_digest",
+      "graph_regime"
+    ]
+  },
+  "ts": "2026-10-24T20:12:28",
+  "duration_s": 0.1,
+  "outcomes": [
+    {
+      "invariant": "rebuild_floor",
+      "case_id": "floor-rebuild-n3",
+      "scenario_id": "floor/rebuild-n3",
+      "status": "pass",
+      "details": "no divergence across builds/compositions (floor not measurable here)",
+      "mismatches": [],
+      "arms": [
+        {
+          "label": "build0",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        },
+        {
+          "label": "build1",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        },
+        {
+          "label": "build2",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": []
+    },
+    {
+      "invariant": "batch_floor",
+      "case_id": "floor-batch-n8",
+      "scenario_id": "floor/batch-n8",
+      "status": "pass",
+      "details": "no divergence across builds/compositions (floor not measurable here)",
+      "mismatches": [],
+      "arms": [
+        {
+          "label": "packed",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "per_request",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order1",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order2",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": []
+    }
+  ],
+  "margin_tau": 0.5,
+  "repeats": 1
+}

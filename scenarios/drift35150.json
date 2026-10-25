@@ -1,0 +1,296 @@
+{
+  "format_version": 1,
+  "matrix": "drift35150",
+  "n_cases": 3,
+  "cases": [
+    {
+      "case_id": "drift-k1-n4-L256",
+      "invariant": "all_reject_equivalence",
+      "scenario": {
+        "format_version": 1,
+        "scenario_id": "drift35150/k1-n4-L256",
+        "description": "#35150 shape: forced-reject drift k=1 n=4 L=256",
+        "requests": [
+          {
+            "rid": "r000",
+            "prompt": "specsafe-probe-drift-0 seed-170a8ad8 epsilon gamma eta gamma zeta iota kappa beta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r001",
+            "prompt": "specsafe-probe-drift-1 seed-162db7e2 eta gamma",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r002",
+            "prompt": "specsafe-probe-drift-2 seed-29df2aee epsilon iota alpha alpha zeta beta iota beta iota iota zeta zeta epsilon eta theta alpha theta delta kappa iota iota zeta iota",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r003",
+            "prompt": "specsafe-probe-drift-3 seed-041211b4 theta zeta epsilon zeta theta theta alpha gamma epsilon zeta eta iota beta iota beta epsilon eta epsilon iota epsilon",
+            "max_tokens": 256
+          }
+        ],
+        "spec_opts": {
+          "method": "spec",
+          "num_speculative_tokens": 1,
+          "rejection_sample_method": "standard",
+          "synthetic_acceptance_rates": null,
+          "draft_mode": "learned",
+          "graph_regime": "captured",
+          "seed": 1,
+          "extra": {}
+        },
+        "permutations": [],
+        "seed": 1
+      }
+    },
+    {
+      "case_id": "drift-k3-n8-L512",
+      "invariant": "all_reject_equivalence",
+      "scenario": {
+        "format_version": 1,
+        "scenario_id": "drift35150/k3-n8-L512",
+        "description": "#35150 shape: forced-reject drift k=3 n=8 L=512",
+        "requests": [
+          {
+            "rid": "r000",
+            "prompt": "specsafe-probe-drift-0 seed-166843f4 alpha beta beta theta kappa alpha iota beta iota delta kappa zeta theta kappa delta theta alpha epsilon",
+            "max_tokens": 512
+          },
+          {
+            "rid": "r001",
+            "prompt": "specsafe-probe-drift-1 seed-0703617a kappa zeta eta zeta",
+            "max_tokens": 512
+          },
+          {
+            "rid": "r002",
+            "prompt": "specsafe-probe-drift-2 seed-0f43ad21 delta kappa gamma beta theta iota eta delta epsilon beta gamma epsilon eta theta zeta epsilon alpha zeta theta eta",
+            "max_tokens": 512
+          },
+          {
+            "rid": "r003",
+            "prompt": "specsafe-probe-drift-3 seed-155a75b6 eta gamma gamma delta theta",
+            "max_tokens": 512
+          },
+          {
+            "rid": "r004",
+            "prompt": "specsafe-probe-drift-4 seed-28a077a8 beta zeta theta zeta zeta kappa",
+            "max_tokens": 512
+          },
+          {
+            "rid": "r005",
+            "prompt": "specsafe-probe-drift-5 seed-1183f90b epsilon iota eta epsilon eta alpha epsilon delta beta eta delta beta theta",
+            "max_tokens": 512
+          },
+          {
+            "rid": "r006",
+            "prompt": "specsafe-probe-drift-6 seed-10e77e41 kappa delta gamma kappa epsilon theta kappa delta alpha kappa iota gamma zeta beta",
+            "max_tokens": 512
+          },
+          {
+            "rid": "r007",
+            "prompt": "specsafe-probe-drift-7 seed-3fc6a0ee gamma zeta eta beta delta delta eta theta beta zeta theta kappa zeta beta gamma kappa gamma eta iota alpha gamma",
+            "max_tokens": 512
+          }
+        ],
+        "spec_opts": {
+          "method": "spec",
+          "num_speculative_tokens": 3,
+          "rejection_sample_method": "standard",
+          "synthetic_acceptance_rates": null,
+          "draft_mode": "learned",
+          "graph_regime": "captured",
+          "seed": 3,
+          "extra": {}
+        },
+        "permutations": [],
+        "seed": 3
+      }
+    },
+    {
+      "case_id": "drift-k7-n32-L256",
+      "invariant": "all_reject_equivalence",
+      "scenario": {
+        "format_version": 1,
+        "scenario_id": "drift35150/k7-n32-L256",
+        "description": "#35150 shape: forced-reject drift k=7 n=32 L=256",
+        "requests": [
+          {
+            "rid": "r000",
+            "prompt": "specsafe-probe-drift-0 seed-0b15621d gamma kappa alpha",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r001",
+            "prompt": "specsafe-probe-drift-1 seed-22d6d41e epsilon alpha eta delta kappa kappa zeta iota eta zeta beta iota kappa iota",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r002",
+            "prompt": "specsafe-probe-drift-2 seed-3ce9c25d iota",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r003",
+            "prompt": "specsafe-probe-drift-3 seed-04457a36 gamma theta gamma epsilon zeta zeta theta iota zeta kappa alpha beta alpha zeta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r004",
+            "prompt": "specsafe-probe-drift-4 seed-08aeed2d zeta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r005",
+            "prompt": "specsafe-probe-drift-5 seed-1822bf23 eta eta alpha kappa gamma gamma theta zeta zeta delta eta iota beta kappa",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r006",
+            "prompt": "specsafe-probe-drift-6 seed-2dbd60b6 delta eta iota epsilon kappa beta zeta gamma iota epsilon delta epsilon",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r007",
+            "prompt": "specsafe-probe-drift-7 seed-247d899b gamma gamma eta kappa delta beta eta kappa theta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r008",
+            "prompt": "specsafe-probe-drift-8 seed-157d3eee beta theta gamma zeta theta delta theta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r009",
+            "prompt": "specsafe-probe-drift-9 seed-21a9d292 iota beta eta delta gamma eta iota epsilon theta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r010",
+            "prompt": "specsafe-probe-drift-10 seed-16227e80 gamma theta theta zeta kappa beta alpha beta delta zeta theta zeta alpha theta gamma alpha delta zeta epsilon zeta kappa",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r011",
+            "prompt": "specsafe-probe-drift-11 seed-3d936df3 kappa delta beta zeta eta beta beta iota beta delta gamma eta eta zeta iota eta alpha delta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r012",
+            "prompt": "specsafe-probe-drift-12 seed-2447c847 iota epsilon delta kappa gamma gamma gamma kappa delta kappa theta zeta beta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r013",
+            "prompt": "specsafe-probe-drift-13 seed-0c9de9fa alpha delta iota alpha gamma beta iota zeta eta theta gamma theta delta alpha",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r014",
+            "prompt": "specsafe-probe-drift-14 seed-2a586322 delta zeta gamma theta eta epsilon beta delta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r015",
+            "prompt": "specsafe-probe-drift-15 seed-321d5686 delta iota theta delta epsilon alpha eta theta delta alpha alpha theta epsilon epsilon delta kappa kappa kappa gamma eta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r016",
+            "prompt": "specsafe-probe-drift-16 seed-0753155b iota theta eta theta zeta zeta gamma eta delta alpha eta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r017",
+            "prompt": "specsafe-probe-drift-17 seed-0fe05c9c theta delta epsilon gamma gamma gamma kappa epsilon zeta zeta gamma delta zeta beta iota eta kappa eta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r018",
+            "prompt": "specsafe-probe-drift-18 seed-0d10e6bf theta zeta beta epsilon zeta eta alpha alpha gamma eta delta kappa beta theta iota beta kappa kappa theta delta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r019",
+            "prompt": "specsafe-probe-drift-19 seed-1097875c gamma beta iota beta alpha eta iota kappa beta zeta kappa delta delta gamma delta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r020",
+            "prompt": "specsafe-probe-drift-20 seed-01070d02 beta kappa epsilon theta gamma zeta delta delta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r021",
+            "prompt": "specsafe-probe-drift-21 seed-0c28678c beta beta alpha iota zeta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r022",
+            "prompt": "specsafe-probe-drift-22 seed-30f98250 iota alpha alpha theta eta zeta theta gamma alpha iota eta theta kappa kappa beta",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r023",
+            "prompt": "specsafe-probe-drift-23 seed-12c17397 iota beta gamma iota kappa eta kappa eta alpha gamma beta alpha iota eta alpha gamma gamma",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r024",
+            "prompt": "specsafe-probe-drift-24 seed-0aee0b9a iota theta epsilon iota alpha kappa delta zeta epsilon gamma zeta kappa iota eta alpha iota alpha gamma eta kappa epsilon zeta alpha",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r025",
+            "prompt": "specsafe-probe-drift-25 seed-0724aacd epsilon zeta eta beta kappa alpha kappa iota alpha eta kappa",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r026",
+            "prompt": "specsafe-probe-drift-26 seed-30a40680 gamma theta beta theta theta iota gamma theta gamma kappa gamma alpha zeta beta delta epsilon delta gamma kappa beta delta eta gamma",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r027",
+            "prompt": "specsafe-probe-drift-27 seed-3eb7dd90 delta beta iota gamma alpha kappa beta zeta delta kappa beta gamma theta alpha iota theta beta epsilon eta zeta gamma kappa",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r028",
+            "prompt": "specsafe-probe-drift-28 seed-15e318fb beta beta eta epsilon kappa alpha alpha gamma delta gamma kappa kappa eta beta eta gamma delta theta epsilon iota delta alpha",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r029",
+            "prompt": "specsafe-probe-drift-29 seed-3c7c5bd0 delta eta iota gamma",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r030",
+            "prompt": "specsafe-probe-drift-30 seed-0dbaa031 zeta alpha zeta theta eta kappa epsilon beta alpha alpha delta kappa iota",
+            "max_tokens": 256
+          },
+          {
+            "rid": "r031",
+            "prompt": "specsafe-probe-drift-31 seed-22df608f kappa epsilon kappa beta delta delta eta theta gamma iota alpha gamma theta epsilon kappa gamma",
+            "max_tokens": 256
+          }
+        ],
+        "spec_opts": {
+          "method": "spec",
+          "num_speculative_tokens": 7,
+          "rejection_sample_method": "standard",
+          "synthetic_acceptance_rates": null,
+          "draft_mode": "learned",
+          "graph_regime": "captured",
+          "seed": 7,
+          "extra": {}
+        },
+        "permutations": [],
+        "seed": 7
+      }
+    }
+  ]
+}

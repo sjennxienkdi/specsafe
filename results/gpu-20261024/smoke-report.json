@@ -1,0 +1,387 @@
+{
+  "run_id": "20261024_154343-smoke",
+  "matrix": "smoke",
+  "engine": "vllm-offline",
+  "engine_info": {
+    "vllm_version": "0.32.0",
+    "model": "/root/autodl-tmp/models/qwen3.8-27b-fp8",
+    "max_model_len": 4096,
+    "tp": 1,
+    "capabilities": [
+      "graph_regime",
+      "logprob_margin"
+    ],
+    "resolved_spec_configs": {
+      "(('gpu_memory_utilization', 0.85), ('max_model_len', 4096))": {
+        "note": "spec config echo unavailable (internals moved)"
+      },
+      "(('enforce_eager', True), ('gpu_memory_utilization', 0.85))": {
+        "note": "spec config echo unavailable (internals moved)"
+      }
+    }
+  },
+  "ts": "2026-10-24T15:43:43",
+  "duration_s": 589.6,
+  "outcomes": [
+    {
+      "invariant": "all_reject_equivalence",
+      "case_id": "smoke-k1-all_reject_equivalence",
+      "scenario_id": "smoke/k1/all_reject_equivalence",
+      "status": "fail",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "spec_forced_reject",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 48,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null
+        }
+      ],
+      "arms": [
+        {
+          "label": "spec_forced_reject",
+          "n_requests": 4,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 4,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        }
+      ]
+    },
+    {
+      "invariant": "accept_path_equivalence",
+      "case_id": "smoke-k1-accept_path_equivalence",
+      "scenario_id": "smoke/k1/accept_path_equivalence",
+      "status": "fail",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "spec_full_accept",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 48,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null
+        },
+        {
+          "arm_a": "spec_natural",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 2,
+          "len_a": 48,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null
+        }
+      ],
+      "arms": [
+        {
+          "label": "spec_full_accept",
+          "n_requests": 4,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "spec_natural",
+          "n_requests": 4,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 4,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        }
+      ]
+    },
+    {
+      "invariant": "permutation_invariance",
+      "case_id": "smoke-k1-permutation_invariance",
+      "scenario_id": "smoke/k1/permutation_invariance",
+      "status": "fail",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "order0",
+          "arm_b": "order1",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 48,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null
+        }
+      ],
+      "arms": [
+        {
+          "label": "order0",
+          "n_requests": 4,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order1",
+          "n_requests": 4,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order2",
+          "n_requests": 4,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        }
+      ]
+    },
+    {
+      "invariant": "split_merge_equivalence",
+      "case_id": "smoke-k1-split_merge_equivalence",
+      "scenario_id": "smoke/k1/split_merge_equivalence",
+      "status": "fail",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 48,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null
+        }
+      ],
+      "arms": [
+        {
+          "label": "packed",
+          "n_requests": 4,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "per_request",
+          "n_requests": 4,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        }
+      ]
+    },
+    {
+      "invariant": "state_isolation",
+      "case_id": "smoke-k1-state_isolation",
+      "scenario_id": "smoke/k1/state_isolation",
+      "status": "fail",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "pair[r000+r001]",
+          "arm_b": "alone:r000",
+          "rid": "r000",
+          "first_divergence": 1,
+          "len_a": 48,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null
+        },
+        {
+          "arm_a": "pair[r001+r000]",
+          "arm_b": "alone:r000",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 48,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null
+        },
+        {
+          "arm_a": "pair[r000+r002]",
+          "arm_b": "alone:r000",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 48,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null
+        },
+        {
+          "arm_a": "pair[r002+r000]",
+          "arm_b": "alone:r000",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 48,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null
+        },
+        {
+          "arm_a": "pair[r000+r003]",
+          "arm_b": "alone:r000",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 48,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null
+        }
+      ],
+      "arms": [
+        {
+          "label": "alone:r000",
+          "n_requests": 1,
+          "total_tokens": 48,
+          "mean_accept_len": null
+        },
+        {
+          "label": "alone:r001",
+          "n_requests": 1,
+          "total_tokens": 48,
+          "mean_accept_len": null
+        },
+        {
+          "label": "alone:r002",
+          "n_requests": 1,
+          "total_tokens": 48,
+          "mean_accept_len": null
+        },
+        {
+          "label": "alone:r003",
+          "n_requests": 1,
+          "total_tokens": 48,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r000+r001]",
+          "n_requests": 2,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r001+r000]",
+          "n_requests": 2,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r000+r002]",
+          "n_requests": 2,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r002+r000]",
+          "n_requests": 2,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r000+r003]",
+          "n_requests": 2,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r003+r000]",
+          "n_requests": 2,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r001+r002]",
+          "n_requests": 2,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r002+r001]",
+          "n_requests": 2,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r001+r003]",
+          "n_requests": 2,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r003+r001]",
+          "n_requests": 2,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r002+r003]",
+          "n_requests": 2,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r003+r002]",
+          "n_requests": 2,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        }
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "smoke-k1-graph_geometry_consistency",
+      "scenario_id": "smoke/k1/graph_geometry_consistency",
+      "status": "fail",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r000",
+          "first_divergence": 3,
+          "len_a": 48,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 3,
+          "len_a": 48,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 4,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 4,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 4,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "model": "/root/autodl-tmp/models/qwen3.8-27b-fp8",
+  "ab_same_config_rebuild": [
+    {
+      "rid": "r003",
+      "pos": 17,
+      "tok_a": 513,
+      "tok_b": 8032,
+      "margin_a_at_div": 0.0,
+      "margin_b_at_div": 0.125
+    }
+  ],
+  "ac_spec_vs_target": [
+    {
+      "rid": "r000",
+      "pos": 21,
+      "tok_a": 16067,
+      "tok_b": 577,
+      "margin_a_at_div": 0.125,
+      "margin_b_at_div": 0.0
+    },
+    {
+      "rid": "r002",
+      "pos": 25,
+      "tok_a": 3050,
+      "tok_b": 13522,
+      "margin_a_at_div": 0.0,
+      "margin_b_at_div": 0.375
+    },
+    {
+      "rid": "r003",
+      "pos": 5,
+      "tok_a": 68,
+      "tok_b": 20171,
+      "margin_a_at_div": 0.0,
+      "margin_b_at_div": 0.125
+    }
+  ],
+  "verdict_hint": "build-noise: identical-config target rebuilds already diverge -> treat matrix FAILs as numeric-boundary, pending 3x repeat"
+}

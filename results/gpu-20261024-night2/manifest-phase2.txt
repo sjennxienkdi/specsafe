@@ -1,0 +1,6 @@
+== phase2 env ==
+2026-10-24T22:12:43+08:00
+NVIDIA RTX PRO 6000 Blackwell Server Edition, 580.82.09
+vllm 0.32.0 torch 2.13.0+cu130
+site-packages: /root/autodl-tmp/venv/lib/python3.12/site-packages
+

@@ -1,0 +1,250 @@
+{
+  "run_id": "20261024_221253-floor",
+  "matrix": "floor",
+  "engine": "vllm-offline",
+  "engine_info": {
+    "vllm_version": "0.32.0",
+    "model": "/root/autodl-tmp/models/qwen3.8-27b-fp8",
+    "max_model_len": 4096,
+    "tp": 1,
+    "capabilities": [
+      "graph_regime",
+      "logprob_margin"
+    ],
+    "resolved_spec_configs": {
+      "(('gpu_memory_utilization', 0.85), ('max_model_len', 4096))": {
+        "note": "spec config echo unavailable (internals moved)"
+      }
+    }
+  },
+  "ts": "2026-10-24T22:12:53",
+  "duration_s": 109.9,
+  "outcomes": [
+    {
+      "invariant": "rebuild_floor",
+      "case_id": "floor-rebuild-n3",
+      "scenario_id": "floor/rebuild-n3",
+      "status": "boundary",
+      "details": "floor: divergences=2 margins[min=0.0 max=0.1875 exact_ties=2/4] suggested_tau>0.1875; tau=0.5",
+      "mismatches": [
+        {
+          "arm_a": "build0",
+          "arm_b": "build1",
+          "rid": "r000",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "build0",
+          "arm_b": "build2",
+          "rid": "r000",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.1875,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "build0",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        },
+        {
+          "label": "build1",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        },
+        {
+          "label": "build2",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": []
+    },
+    {
+      "invariant": "batch_floor",
+      "case_id": "floor-batch-n8",
+      "scenario_id": "floor/batch-n8",
+      "status": "boundary",
+      "details": "floor: divergences=10 margins[min=0.0 max=0.125 exact_ties=8/20] suggested_tau>0.125; tau=0.5",
+      "mismatches": [
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r002",
+          "first_divergence": 0,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r003",
+          "first_divergence": 1,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r004",
+          "first_divergence": 6,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r005",
+          "first_divergence": 2,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r007",
+          "first_divergence": 1,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "order1",
+          "rid": "r004",
+          "first_divergence": 0,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "order1",
+          "rid": "r005",
+          "first_divergence": 2,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "order1",
+          "rid": "r007",
+          "first_divergence": 2,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "order2",
+          "rid": "r004",
+          "first_divergence": 0,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "order2",
+          "rid": "r005",
+          "first_divergence": 2,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "packed",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "per_request",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order1",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order2",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": []
+    }
+  ],
+  "margin_tau": 0.5,
+  "repeats": 1
+}

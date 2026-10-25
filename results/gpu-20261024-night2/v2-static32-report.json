@@ -1,0 +1,3038 @@
+{
+  "run_id": "20261024_221450-static32",
+  "matrix": "static32",
+  "engine": "vllm-offline",
+  "engine_info": {
+    "vllm_version": "0.32.0",
+    "model": "/root/autodl-tmp/models/qwen3.8-27b-fp8",
+    "max_model_len": 4096,
+    "tp": 1,
+    "capabilities": [
+      "graph_regime",
+      "logprob_margin"
+    ],
+    "resolved_spec_configs": {
+      "(('gpu_memory_utilization', 0.85), ('max_model_len', 4096))": {
+        "note": "spec config echo unavailable (internals moved)"
+      },
+      "(('enforce_eager', True), ('gpu_memory_utilization', 0.85))": {
+        "note": "spec config echo unavailable (internals moved)"
+      }
+    }
+  },
+  "ts": "2026-10-24T22:14:50",
+  "duration_s": 14451.8,
+  "outcomes": [
+    {
+      "invariant": "all_reject_equivalence",
+      "case_id": "i1-forced-reject-k1-s",
+      "scenario_id": "static32/i1-forced-reject-k1-s",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "spec_forced_reject",
+          "arm_b": "target_only",
+          "rid": "r001",
+          "first_divergence": 11,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "spec_forced_reject",
+          "arm_b": "target_only",
+          "rid": "r003",
+          "first_divergence": 4,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.1875,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "spec_forced_reject",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "all_reject_equivalence",
+      "case_id": "i1-forced-reject-k1-l",
+      "scenario_id": "static32/i1-forced-reject-k1-l",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "spec_forced_reject",
+          "arm_b": "target_only",
+          "rid": "r001",
+          "first_divergence": 1,
+          "len_a": 256,
+          "len_b": 256,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "spec_forced_reject",
+          "arm_b": "target_only",
+          "rid": "r004",
+          "first_divergence": 2,
+          "len_a": 256,
+          "len_b": 256,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "spec_forced_reject",
+          "arm_b": "target_only",
+          "rid": "r006",
+          "first_divergence": 1,
+          "len_a": 256,
+          "len_b": 256,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "spec_forced_reject",
+          "n_requests": 8,
+          "total_tokens": 2048,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 8,
+          "total_tokens": 2048,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "accept_path_equivalence",
+      "case_id": "i2-natural-k1",
+      "scenario_id": "static32/i2-natural-k1",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "spec_full_accept",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 1,
+          "len_a": 32,
+          "len_b": 32,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "spec_full_accept",
+          "arm_b": "target_only",
+          "rid": "r003",
+          "first_divergence": 0,
+          "len_a": 128,
+          "len_b": 128,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.1875,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "spec_full_accept",
+          "arm_b": "target_only",
+          "rid": "r004",
+          "first_divergence": 1,
+          "len_a": 256,
+          "len_b": 256,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "spec_natural",
+          "arm_b": "target_only",
+          "rid": "r001",
+          "first_divergence": 0,
+          "len_a": 256,
+          "len_b": 256,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "spec_natural",
+          "arm_b": "target_only",
+          "rid": "r003",
+          "first_divergence": 2,
+          "len_a": 128,
+          "len_b": 128,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "spec_natural",
+          "arm_b": "target_only",
+          "rid": "r004",
+          "first_divergence": 0,
+          "len_a": 256,
+          "len_b": 256,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "spec_full_accept",
+          "n_requests": 8,
+          "total_tokens": 1120,
+          "mean_accept_len": null
+        },
+        {
+          "label": "spec_natural",
+          "n_requests": 8,
+          "total_tokens": 1120,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 8,
+          "total_tokens": 1120,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "permutation_invariance",
+      "case_id": "i3-perm-k1-eq",
+      "scenario_id": "static32/i3-perm-k1-eq",
+      "status": "pass",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "order0",
+          "arm_b": "order1",
+          "rid": "r004",
+          "first_divergence": 1,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "order0",
+          "arm_b": "order1",
+          "rid": "r005",
+          "first_divergence": 0,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "order0",
+          "arm_b": "order1",
+          "rid": "r006",
+          "first_divergence": 4,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "order0",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order1",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order2",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "invariant": "permutation_invariance",
+      "case_id": "i3-perm-k1-rag",
+      "scenario_id": "static32/i3-perm-k1-rag",
+      "status": "pass",
+      "details": "",
+      "mismatches": [],
+      "arms": [
+        {
+          "label": "order0",
+          "n_requests": 8,
+          "total_tokens": 720,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order1",
+          "n_requests": 8,
+          "total_tokens": 720,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order2",
+          "n_requests": 8,
+          "total_tokens": 720,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "invariant": "split_merge_equivalence",
+      "case_id": "i4-split-k1-eq",
+      "scenario_id": "static32/i4-split-k1-eq",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r003",
+          "first_divergence": 0,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r004",
+          "first_divergence": 3,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.3125,
+          "margin_b": 0.1875,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "packed",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "per_request",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "split_merge_equivalence",
+      "case_id": "i4-split-k1-rag",
+      "scenario_id": "static32/i4-split-k1-rag",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r001",
+          "first_divergence": 4,
+          "len_a": 24,
+          "len_b": 24,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.5,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r004",
+          "first_divergence": 2,
+          "len_a": 48,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r005",
+          "first_divergence": 0,
+          "len_a": 192,
+          "len_b": 192,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "packed",
+          "n_requests": 8,
+          "total_tokens": 888,
+          "mean_accept_len": null
+        },
+        {
+          "label": "per_request",
+          "n_requests": 8,
+          "total_tokens": 888,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "state_isolation",
+      "case_id": "i5-isolation-k1",
+      "scenario_id": "static32/i5-isolation-k1",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "pair[r000+r001]",
+          "arm_b": "alone:r000",
+          "rid": "r000",
+          "first_divergence": 2,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r000+r002]",
+          "arm_b": "alone:r000",
+          "rid": "r000",
+          "first_divergence": 2,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r000+r002]",
+          "arm_b": "alone:r002",
+          "rid": "r002",
+          "first_divergence": 3,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r002+r000]",
+          "arm_b": "alone:r000",
+          "rid": "r000",
+          "first_divergence": 2,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r002+r000]",
+          "arm_b": "alone:r002",
+          "rid": "r002",
+          "first_divergence": 3,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r000+r003]",
+          "arm_b": "alone:r000",
+          "rid": "r000",
+          "first_divergence": 2,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r003+r000]",
+          "arm_b": "alone:r000",
+          "rid": "r000",
+          "first_divergence": 2,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r001+r002]",
+          "arm_b": "alone:r002",
+          "rid": "r002",
+          "first_divergence": 1,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r002+r001]",
+          "arm_b": "alone:r002",
+          "rid": "r002",
+          "first_divergence": 1,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r002+r003]",
+          "arm_b": "alone:r002",
+          "rid": "r002",
+          "first_divergence": 3,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r003+r002]",
+          "arm_b": "alone:r002",
+          "rid": "r002",
+          "first_divergence": 3,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "alone:r000",
+          "n_requests": 1,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "alone:r001",
+          "n_requests": 1,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "alone:r002",
+          "n_requests": 1,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "alone:r003",
+          "n_requests": 1,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r000+r001]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r001+r000]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r000+r002]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r002+r000]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r000+r003]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r003+r000]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r001+r002]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r002+r001]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r001+r003]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r003+r001]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r002+r003]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r003+r002]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k1-n1",
+      "scenario_id": "static32/i6-graph-k1-n1",
+      "status": "pass",
+      "details": "",
+      "mismatches": [],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 1,
+          "total_tokens": 64,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 1,
+          "total_tokens": 64,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 1,
+          "total_tokens": 64,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k1-n2",
+      "scenario_id": "static32/i6-graph-k1-n2",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 2,
+          "total_tokens": 128,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 2,
+          "total_tokens": 128,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 2,
+          "total_tokens": 128,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k1-n3",
+      "scenario_id": "static32/i6-graph-k1-n3",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r000",
+          "first_divergence": 9,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.625,
+          "margin_b": 0.4375,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 9,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 3,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 3,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 3,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k1-n4",
+      "scenario_id": "static32/i6-graph-k1-n4",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r000",
+          "first_divergence": 3,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r001",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r003",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r001",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r003",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k1-n5",
+      "scenario_id": "static32/i6-graph-k1-n5",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r000",
+          "first_divergence": 8,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r001",
+          "first_divergence": 8,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 8,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r001",
+          "first_divergence": 6,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r002",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r003",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 5,
+          "total_tokens": 320,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 5,
+          "total_tokens": 320,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 5,
+          "total_tokens": 320,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k1-n7",
+      "scenario_id": "static32/i6-graph-k1-n7",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r001",
+          "first_divergence": 2,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r005",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r001",
+          "first_divergence": 2,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r003",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r005",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 7,
+          "total_tokens": 448,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 7,
+          "total_tokens": 448,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 7,
+          "total_tokens": 448,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k1-n8",
+      "scenario_id": "static32/i6-graph-k1-n8",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r001",
+          "first_divergence": 3,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r007",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r001",
+          "first_divergence": 3,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r003",
+          "first_divergence": 5,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r007",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 8,
+          "total_tokens": 512,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 8,
+          "total_tokens": 512,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 8,
+          "total_tokens": 512,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k1-n15",
+      "scenario_id": "static32/i6-graph-k1-n15",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r010",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r013",
+          "first_divergence": 9,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r004",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.1875,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r007",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r008",
+          "first_divergence": 3,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r014",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 15,
+          "total_tokens": 960,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 15,
+          "total_tokens": 960,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 15,
+          "total_tokens": 960,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k1-n16",
+      "scenario_id": "static32/i6-graph-k1-n16",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r002",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r006",
+          "first_divergence": 9,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r014",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r004",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r006",
+          "first_divergence": 10,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r007",
+          "first_divergence": 2,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.1875,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r012",
+          "first_divergence": 9,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 16,
+          "total_tokens": 1024,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 16,
+          "total_tokens": 1024,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 16,
+          "total_tokens": 1024,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "all_reject_equivalence",
+      "case_id": "i1-forced-reject-k3-s",
+      "scenario_id": "static32/i1-forced-reject-k3-s",
+      "status": "pass",
+      "details": "",
+      "mismatches": [],
+      "arms": [
+        {
+          "label": "spec_forced_reject",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "invariant": "all_reject_equivalence",
+      "case_id": "i1-forced-reject-k3-l",
+      "scenario_id": "static32/i1-forced-reject-k3-l",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "spec_forced_reject",
+          "arm_b": "target_only",
+          "rid": "r001",
+          "first_divergence": 0,
+          "len_a": 256,
+          "len_b": 256,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "spec_forced_reject",
+          "arm_b": "target_only",
+          "rid": "r002",
+          "first_divergence": 3,
+          "len_a": 256,
+          "len_b": 256,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "spec_forced_reject",
+          "arm_b": "target_only",
+          "rid": "r006",
+          "first_divergence": 0,
+          "len_a": 256,
+          "len_b": 256,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "spec_forced_reject",
+          "n_requests": 8,
+          "total_tokens": 2048,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 8,
+          "total_tokens": 2048,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "accept_path_equivalence",
+      "case_id": "i2-natural-k3",
+      "scenario_id": "static32/i2-natural-k3",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "spec_full_accept",
+          "arm_b": "target_only",
+          "rid": "r003",
+          "first_divergence": 2,
+          "len_a": 256,
+          "len_b": 256,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "spec_full_accept",
+          "arm_b": "target_only",
+          "rid": "r004",
+          "first_divergence": 0,
+          "len_a": 128,
+          "len_b": 128,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "spec_natural",
+          "arm_b": "target_only",
+          "rid": "r003",
+          "first_divergence": 2,
+          "len_a": 256,
+          "len_b": 256,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "spec_full_accept",
+          "n_requests": 8,
+          "total_tokens": 1056,
+          "mean_accept_len": null
+        },
+        {
+          "label": "spec_natural",
+          "n_requests": 8,
+          "total_tokens": 1056,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 8,
+          "total_tokens": 1056,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "permutation_invariance",
+      "case_id": "i3-perm-k3-eq",
+      "scenario_id": "static32/i3-perm-k3-eq",
+      "status": "pass",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "order1",
+          "arm_b": "order2",
+          "rid": "r002",
+          "first_divergence": 0,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "order0",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order1",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order2",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "invariant": "permutation_invariance",
+      "case_id": "i3-perm-k3-rag",
+      "scenario_id": "static32/i3-perm-k3-rag",
+      "status": "pass",
+      "details": "",
+      "mismatches": [],
+      "arms": [
+        {
+          "label": "order0",
+          "n_requests": 8,
+          "total_tokens": 792,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order1",
+          "n_requests": 8,
+          "total_tokens": 792,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order2",
+          "n_requests": 8,
+          "total_tokens": 792,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "invariant": "split_merge_equivalence",
+      "case_id": "i4-split-k3-eq",
+      "scenario_id": "static32/i4-split-k3-eq",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r000",
+          "first_divergence": 3,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r002",
+          "first_divergence": 1,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.1875,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r004",
+          "first_divergence": 0,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r007",
+          "first_divergence": 2,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "packed",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "per_request",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "split_merge_equivalence",
+      "case_id": "i4-split-k3-rag",
+      "scenario_id": "static32/i4-split-k3-rag",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r002",
+          "first_divergence": 12,
+          "len_a": 192,
+          "len_b": 192,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r004",
+          "first_divergence": 2,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "packed",
+          "arm_b": "per_request",
+          "rid": "r007",
+          "first_divergence": 22,
+          "len_a": 23,
+          "len_b": 48,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.3125,
+          "margin_b": 0.8125,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "packed",
+          "n_requests": 8,
+          "total_tokens": 767,
+          "mean_accept_len": null
+        },
+        {
+          "label": "per_request",
+          "n_requests": 8,
+          "total_tokens": 792,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "state_isolation",
+      "case_id": "i5-isolation-k3",
+      "scenario_id": "static32/i5-isolation-k3",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "pair[r000+r001]",
+          "arm_b": "alone:r001",
+          "rid": "r001",
+          "first_divergence": 3,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.1875,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r001+r000]",
+          "arm_b": "alone:r001",
+          "rid": "r001",
+          "first_divergence": 3,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.1875,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r000+r002]",
+          "arm_b": "alone:r002",
+          "rid": "r002",
+          "first_divergence": 1,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r002+r000]",
+          "arm_b": "alone:r002",
+          "rid": "r002",
+          "first_divergence": 1,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r001+r002]",
+          "arm_b": "alone:r001",
+          "rid": "r001",
+          "first_divergence": 3,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.1875,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r001+r002]",
+          "arm_b": "alone:r002",
+          "rid": "r002",
+          "first_divergence": 1,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r002+r001]",
+          "arm_b": "alone:r001",
+          "rid": "r001",
+          "first_divergence": 3,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.1875,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r002+r001]",
+          "arm_b": "alone:r002",
+          "rid": "r002",
+          "first_divergence": 1,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r001+r003]",
+          "arm_b": "alone:r001",
+          "rid": "r001",
+          "first_divergence": 4,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r003+r001]",
+          "arm_b": "alone:r001",
+          "rid": "r001",
+          "first_divergence": 4,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r002+r003]",
+          "arm_b": "alone:r002",
+          "rid": "r002",
+          "first_divergence": 1,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "pair[r003+r002]",
+          "arm_b": "alone:r002",
+          "rid": "r002",
+          "first_divergence": 1,
+          "len_a": 96,
+          "len_b": 96,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "alone:r000",
+          "n_requests": 1,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "alone:r001",
+          "n_requests": 1,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "alone:r002",
+          "n_requests": 1,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "alone:r003",
+          "n_requests": 1,
+          "total_tokens": 96,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r000+r001]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r001+r000]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r000+r002]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r002+r000]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r000+r003]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r003+r000]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r001+r002]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r002+r001]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r001+r003]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r003+r001]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r002+r003]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "pair[r003+r002]",
+          "n_requests": 2,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k3-n1",
+      "scenario_id": "static32/i6-graph-k3-n1",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 1,
+          "total_tokens": 64,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 1,
+          "total_tokens": 64,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 1,
+          "total_tokens": 64,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k3-n2",
+      "scenario_id": "static32/i6-graph-k3-n2",
+      "status": "pass",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 2,
+          "total_tokens": 128,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 2,
+          "total_tokens": 128,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 2,
+          "total_tokens": 128,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "pass",
+        "pass",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k3-n3",
+      "scenario_id": "static32/i6-graph-k3-n3",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r000",
+          "first_divergence": 2,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 2,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r001",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 3,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 3,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 3,
+          "total_tokens": 192,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k3-n4",
+      "scenario_id": "static32/i6-graph-k3-n4",
+      "status": "pass",
+      "details": "",
+      "mismatches": [],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "pass",
+        "pass",
+        "pass"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k3-n5",
+      "scenario_id": "static32/i6-graph-k3-n5",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r003",
+          "first_divergence": 3,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r004",
+          "first_divergence": 2,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 5,
+          "total_tokens": 320,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 5,
+          "total_tokens": 320,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 5,
+          "total_tokens": 320,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k3-n7",
+      "scenario_id": "static32/i6-graph-k3-n7",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r005",
+          "first_divergence": 4,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 1.4375,
+          "margin_b": 0.25,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r004",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 7,
+          "total_tokens": 448,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 7,
+          "total_tokens": 448,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 7,
+          "total_tokens": 448,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k3-n8",
+      "scenario_id": "static32/i6-graph-k3-n8",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r000",
+          "first_divergence": 7,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.1875,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r001",
+          "first_divergence": 43,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.3125,
+          "margin_b": 4.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r002",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r003",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r001",
+          "first_divergence": 43,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.3125,
+          "margin_b": 4.25,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r002",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 8,
+          "total_tokens": 512,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 8,
+          "total_tokens": 512,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 8,
+          "total_tokens": 512,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k3-n15",
+      "scenario_id": "static32/i6-graph-k3-n15",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r007",
+          "first_divergence": 18,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r008",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.25,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r011",
+          "first_divergence": 2,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.25,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r014",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r004",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r009",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 15,
+          "total_tokens": 960,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 15,
+          "total_tokens": 960,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 15,
+          "total_tokens": 960,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    },
+    {
+      "invariant": "graph_geometry_consistency",
+      "case_id": "i6-graph-k3-n16",
+      "scenario_id": "static32/i6-graph-k3-n16",
+      "status": "boundary",
+      "details": "",
+      "mismatches": [
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r008",
+          "first_divergence": 5,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r009",
+          "first_divergence": 1,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r010",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r012",
+          "first_divergence": 5,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.25,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "eager",
+          "rid": "r013",
+          "first_divergence": 2,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r000",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r007",
+          "first_divergence": 4,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.125,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r009",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r010",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0625,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r012",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.125,
+          "margin_b": 0.0,
+          "verdict": "boundary"
+        },
+        {
+          "arm_a": "captured",
+          "arm_b": "target_only",
+          "rid": "r013",
+          "first_divergence": 0,
+          "len_a": 64,
+          "len_b": 64,
+          "state_a": null,
+          "state_b": null,
+          "margin_a": 0.0,
+          "margin_b": 0.0625,
+          "verdict": "boundary"
+        }
+      ],
+      "arms": [
+        {
+          "label": "captured",
+          "n_requests": 16,
+          "total_tokens": 1024,
+          "mean_accept_len": null
+        },
+        {
+          "label": "eager",
+          "n_requests": 16,
+          "total_tokens": 1024,
+          "mean_accept_len": null
+        },
+        {
+          "label": "target_only",
+          "n_requests": 16,
+          "total_tokens": 1024,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": [
+        "boundary",
+        "boundary",
+        "boundary"
+      ]
+    }
+  ],
+  "margin_tau": 0.5,
+  "repeats": 3
+}

@@ -1,0 +1,136 @@
+{
+  "format_version": 1,
+  "matrix": "floor",
+  "n_cases": 2,
+  "cases": [
+    {
+      "case_id": "floor-rebuild-n3",
+      "invariant": "rebuild_floor",
+      "scenario": {
+        "format_version": 1,
+        "scenario_id": "floor/rebuild-n3",
+        "description": "3x independent rebuilds of the same config",
+        "requests": [
+          {
+            "rid": "r000",
+            "prompt": "specsafe-probe-floor-rebuild-0 seed-15276f43 eta epsilon gamma theta alpha alpha theta iota gamma theta iota zeta delta theta delta",
+            "max_tokens": 64
+          },
+          {
+            "rid": "r001",
+            "prompt": "specsafe-probe-floor-rebuild-1 seed-1908cddf beta iota eta alpha alpha alpha zeta kappa kappa alpha theta alpha beta iota epsilon kappa gamma zeta beta",
+            "max_tokens": 64
+          },
+          {
+            "rid": "r002",
+            "prompt": "specsafe-probe-floor-rebuild-2 seed-1a163c8b zeta theta alpha kappa kappa epsilon gamma beta delta alpha alpha gamma theta gamma alpha zeta delta theta theta beta zeta zeta alpha",
+            "max_tokens": 64
+          },
+          {
+            "rid": "r003",
+            "prompt": "specsafe-probe-floor-rebuild-3 seed-29928877 delta beta theta beta beta theta theta kappa epsilon",
+            "max_tokens": 64
+          }
+        ],
+        "spec_opts": {
+          "method": "none",
+          "num_speculative_tokens": 0,
+          "rejection_sample_method": "standard",
+          "synthetic_acceptance_rates": null,
+          "draft_mode": "learned",
+          "graph_regime": "captured",
+          "seed": 42,
+          "extra": {
+            "probe_builds": "3"
+          }
+        },
+        "permutations": [],
+        "seed": 42
+      }
+    },
+    {
+      "case_id": "floor-batch-n8",
+      "invariant": "batch_floor",
+      "scenario": {
+        "format_version": 1,
+        "scenario_id": "floor/batch-n8",
+        "description": "packed vs per-request vs permutations, one build",
+        "requests": [
+          {
+            "rid": "r000",
+            "prompt": "specsafe-probe-floor-batch-0 seed-381090b3 alpha theta zeta alpha iota kappa eta delta delta alpha eta theta zeta epsilon alpha epsilon delta alpha theta iota iota theta",
+            "max_tokens": 96
+          },
+          {
+            "rid": "r001",
+            "prompt": "specsafe-probe-floor-batch-1 seed-0baf1fd3 eta zeta alpha beta beta gamma beta alpha gamma beta delta alpha epsilon kappa beta",
+            "max_tokens": 96
+          },
+          {
+            "rid": "r002",
+            "prompt": "specsafe-probe-floor-batch-2 seed-35198bc7 iota kappa eta beta delta theta theta epsilon epsilon theta gamma theta gamma beta",
+            "max_tokens": 96
+          },
+          {
+            "rid": "r003",
+            "prompt": "specsafe-probe-floor-batch-3 seed-3f40ac30 eta theta kappa eta beta kappa kappa kappa theta zeta gamma gamma alpha kappa gamma alpha iota theta theta eta iota alpha gamma",
+            "max_tokens": 96
+          },
+          {
+            "rid": "r004",
+            "prompt": "specsafe-probe-floor-batch-4 seed-3f76dac5 gamma eta beta eta delta",
+            "max_tokens": 96
+          },
+          {
+            "rid": "r005",
+            "prompt": "specsafe-probe-floor-batch-5 seed-137eef02 zeta gamma zeta gamma eta beta theta eta delta kappa epsilon iota theta eta iota theta beta kappa",
+            "max_tokens": 96
+          },
+          {
+            "rid": "r006",
+            "prompt": "specsafe-probe-floor-batch-6 seed-0161101b alpha iota alpha iota kappa kappa delta delta beta beta epsilon zeta delta delta iota gamma beta alpha eta gamma delta",
+            "max_tokens": 96
+          },
+          {
+            "rid": "r007",
+            "prompt": "specsafe-probe-floor-batch-7 seed-314e84f2 beta epsilon iota kappa eta kappa alpha eta gamma theta iota alpha theta eta kappa gamma epsilon beta epsilon eta",
+            "max_tokens": 96
+          }
+        ],
+        "spec_opts": {
+          "method": "none",
+          "num_speculative_tokens": 0,
+          "rejection_sample_method": "standard",
+          "synthetic_acceptance_rates": null,
+          "draft_mode": "learned",
+          "graph_regime": "captured",
+          "seed": 43,
+          "extra": {}
+        },
+        "permutations": [
+          [
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            6,
+            5,
+            0,
+            3,
+            4,
+            2,
+            7
+          ]
+        ],
+        "seed": 43
+      }
+    }
+  ]
+}

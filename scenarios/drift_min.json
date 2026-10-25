@@ -1,0 +1,24 @@
+{
+  "format_version": 1,
+  "matrix": "drift_min",
+  "note": "drift-k7 最小复现网格。场景由 cloud/drift_min_run.py 从 drift35150.json 的 k7 原始场景确定性派生（保留 r006 原始 prompt；selector: all=前 n 个, first8=r000-r007, r006=单请求）。本文件记录网格参数供复现与回归。",
+  "oracle": {"tau": 0.5, "repeats": 3, "method": "forced_reject synthetic rates=[0.0]*K vs target-only"},
+  "cases": [
+    {"case": "S0", "K": 7, "n": 32, "L": 256, "selector": "all"},
+    {"case": "S1", "K": 7, "n": 8,  "L": 256, "selector": "first8"},
+    {"case": "S2", "K": 7, "n": 32, "L": 128, "selector": "all"},
+    {"case": "S3", "K": 5, "n": 32, "L": 256, "selector": "all"},
+    {"case": "S4", "K": 7, "n": 1,  "L": 256, "selector": "r006"},
+    {"case": "S5", "K": 5, "n": 8,  "L": 256, "selector": "first8"},
+    {"case": "S6", "K": 5, "n": 4,  "L": 256, "selector": "all"},
+    {"case": "S7", "K": 5, "n": 8,  "L": 192, "selector": "first8", "role": "minimal stable reproducer"},
+    {"case": "S8", "K": 3, "n": 8,  "L": 256, "selector": "first8"}
+  ],
+  "results_20261025": {
+    "verdicts": {"S0": "fail", "S1": "fail", "S2": "boundary", "S3": "fail",
+                  "S4": "boundary(1/3 fail)", "S5": "fail", "S6": "boundary",
+                  "S7": "fail", "S8": "boundary"},
+    "minimal_stable": {"K": 5, "n": 8, "L": 192},
+    "kill_boundaries": {"K_le": 3, "n_le": 4, "L_le": 128}
+  }
+}
