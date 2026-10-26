@@ -1,0 +1,92 @@
+{
+  "run_id": "20261026_121553-floor",
+  "matrix": "floor",
+  "engine": "vllm-offline",
+  "engine_info": {
+    "vllm_version": "0.32.0",
+    "model": "/root/autodl-tmp/models/qwen3.8-27b-int4",
+    "max_model_len": 4096,
+    "tp": 1,
+    "capabilities": [
+      "graph_regime",
+      "logprob_margin"
+    ],
+    "resolved_spec_configs": {
+      "(('attention_config', (('use_trtllm_attention', 0),)), ('gpu_memory_utilization', 0.85))": {
+        "note": "spec config echo unavailable (internals moved)"
+      }
+    }
+  },
+  "ts": "2026-10-26T12:15:53",
+  "duration_s": 117.8,
+  "outcomes": [
+    {
+      "invariant": "rebuild_floor",
+      "case_id": "floor-rebuild-n3",
+      "scenario_id": "floor/rebuild-n3",
+      "status": "pass",
+      "details": "no divergence across builds/compositions (floor not measurable here)",
+      "mismatches": [],
+      "arms": [
+        {
+          "label": "build0",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        },
+        {
+          "label": "build1",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        },
+        {
+          "label": "build2",
+          "n_requests": 4,
+          "total_tokens": 256,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": []
+    },
+    {
+      "invariant": "batch_floor",
+      "case_id": "floor-batch-n8",
+      "scenario_id": "floor/batch-n8",
+      "status": "pass",
+      "details": "no divergence across builds/compositions (floor not measurable here)",
+      "mismatches": [],
+      "arms": [
+        {
+          "label": "packed",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "per_request",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order1",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        },
+        {
+          "label": "order2",
+          "n_requests": 8,
+          "total_tokens": 768,
+          "mean_accept_len": null
+        }
+      ],
+      "margin_tau": 0.5,
+      "repeat_verdicts": []
+    }
+  ],
+  "margin_tau": 0.5,
+  "repeats": 1
+}

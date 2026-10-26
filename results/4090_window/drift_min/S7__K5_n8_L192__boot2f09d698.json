@@ -1,0 +1,43 @@
+{
+ "report": {
+  "case": "S7",
+  "K": 5,
+  "n": 8,
+  "L": 192,
+  "boot": "2f09d698",
+  "repeats": [
+   "pass",
+   "pass",
+   "pass"
+  ],
+  "final": "pass",
+  "tau": 0.5,
+  "duration_s": 790.0,
+  "env": {
+   "vllm": "0.32.0",
+   "model": "/root/autodl-tmp/models/qwen3.8-27b-fp8",
+   "gpu": "NVIDIA GeForce RTX 4090, 570.211.01",
+   "ts": "2026-10-26 02:58:20"
+  }
+ },
+ "repeat_details": [
+  {
+   "verdict": "pass",
+   "mismatches": [],
+   "fail_class": [],
+   "tokens": {}
+  },
+  {
+   "verdict": "pass",
+   "mismatches": [],
+   "fail_class": [],
+   "tokens": {}
+  },
+  {
+   "verdict": "pass",
+   "mismatches": [],
+   "fail_class": [],
+   "tokens": {}
+  }
+ ]
+}

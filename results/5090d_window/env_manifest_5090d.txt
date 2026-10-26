@@ -1,0 +1,39 @@
+== 5090D window env manifest (2026-10-26) ==
+== time ==
+2026-10-26T12:30+08:00 (approx, anchors running)
+== gpu ==
+NVIDIA GeForce RTX 5090 D, driver 580.178.04, 32607 MiB, UUID GPU-5cbfb21b-d880-d4c1-4beb-3d2a419488f5
+sm120 consumer SKU, single card, TP=1
+== python / venv ==
+Python 3.11.17 (system), venv at /hy-tmp/venv (data disk 80G)
+vllm 0.32.0 (PyPI, cu130 stack), torch 2.13.0+cu130
+== flashinfer stack (critical for sm120 consumer) ==
+flashinfer-python 0.7.0.post1
+flashinfer-jit-cache 0.7.0.post1+cu130 (base shim, --no-deps)
+flashinfer-jit-cache-sm120f 0.7.0.post1+cu130 (560 prebuilt modules, sha256 1c8b5a3614fdc9ad4f0e26502c5438657e28d667d165b05ff0383ca8d208568f)
+ninja 1.13.2 (venv, required by vllm has_flashinfer gate)
+CUDA_HOME=/hy-tmp/venv/lib/python3.11/site-packages/nvidia/cu13 (nvcc 13.4)
+NOTE: system /usr/local/cuda is 12.8; flashinfer get_cuda_version() prefers nvcc ->
+      without CUDA_HOME override, sm120 arch detection fails ("SM 12.x requires
+      CUDA >= 12.9") - root cause of 3 failed boot attempts.
+== attention path ==
+FlashInfer backend (selector-chosen; fp8-KV recipe of RedHatAI INT4 excludes
+FLASH_ATTN on sm120), with --attention-config.use_trtllm_attention=0 to disable
+XQA/TRTLLM decode (spec-dec XQA variant absent from sm120f jit-cache -> JIT
+build without headers fails). Native FlashInfer decode path = same family as
+4090 window (sm89 has no XQA). Sampler: VLLM_USE_FLASHINFER_SAMPLER=0 (mirror
+4090 where sampler gate closed). vllm code itself 100% pristine (no patches).
+== models ==
+/root/autodl-tmp/models/qwen3.8-27b-int4  (RedHatAI, +vocab.json/merges.txt copied
+  from Qwen FP8 repo - INT4 repo lacks slow-tokenizer files, vocab_size=1 bug)
+  tokenizer check: vocab_size=248044 OK
+/root/autodl-tmp/models/drafter-dspark (Doopeworld/Qwen3.8-27B-DSpark-vLLM)
+== local config-level tweaks (documented, no vllm code changes) ==
+cloud/drift_min_run.py: extra_llm_kwargs={"attention_config": {"use_trtllm_attention": 0}}
+specsafe/cli.py _parse_kv: +json branch (to pass dict via --kv)
+spectuner/probe/probe_run.sh: +--attention-config.use_trtllm_attention 0 in serve
+bench/run_all.sh: EXTRA_ARGS="--attention-config.use_trtllm_attention 0" (env)
+== comparator windows ==
+PRO 6000 96G (sm120 pro, FP8, cu130): S7 FAIL 3/3, floor 0-0.1875
+4090 48G modded (sm89, FP8, cu129): S7 PASS 6/6, floor unmeasurable
+this window (sm120 consumer, INT4, cu130): S7 boundary 6/6 zero fail-class, floor unmeasurable

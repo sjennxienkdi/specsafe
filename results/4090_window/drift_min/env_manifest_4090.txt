@@ -1,0 +1,25 @@
+== time ==
+2026-10-26T01:51:03+08:00
+== gpu ==
+name, driver_version, memory.total [MiB], memory.used [MiB]
+NVIDIA GeForce RTX 4090, 570.211.01, 49140 MiB, 1 MiB
+== python ==
+Python 3.11.17
+== vllm ==
+Name: vllm
+Version: 0.32.0+cu129
+Summary: A high-throughput and memory-efficient inference and serving engine for LLMs
+== vllm patch check ==
+vllm path: /root/autodl-tmp/venv/lib/python3.11/site-packages/vllm
+config/speculative.py mtime: 2026-10-26 01:49:52
+== torch ==
+2.13.0+cu129 12.9
+== models ==
+??  /root/autodl-tmp/models/qwen3.8-27b-fp8/
+??  /root/autodl-tmp/models/qwen3.8-27b-int4/
+== disk ==
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          30G  8.5G   22G  29% /
+overlay          30G  8.5G   22G  29% /
+== specsafe ==
+specsafe 0.2.0
